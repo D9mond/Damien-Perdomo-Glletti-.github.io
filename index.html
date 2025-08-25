@@ -37,21 +37,20 @@
     }
 
     h2 {
-      position: relative;
       color: #00f0ff;
       text-shadow: 0 0 3px #00f0ff, 0 0 6px #00f0ff;
       margin: 40px 0 20px 0;
-      padding-bottom: 10px;
+      border-bottom: 2px solid #00f0ff;
+      padding-bottom: 5px;
       width: 100%;
+      max-width: 800px;
+      text-align: left;
     }
 
-    h2::after {
-      content: '';
-      display: block;
-      height: 5px; /* grosor de la barra */
-      background: #00f0ff;
-      width: 100%;  /* largo de la barra */
-      margin-top: 5px;
+    /* Barra azul más larga solo para Más sobre mí */
+    #mas-sobre-mi h2 {
+      border-bottom-width: 5px; /* más gruesa */
+      width: 100%; /* más larga */
     }
 
     p.intro {
@@ -148,7 +147,7 @@
   <section id="mas-sobre-mi">
     <h2>Más sobre mí</h2>
     <p>
-      Soy un estudiante en transición hacia la ciberseguridad, con conocimientos en Python, Linux y análisis SOC. 
+      Soy un profesional en transición hacia la ciberseguridad, con formación en educación, dominio de tres idiomas (español, inglés y francés) Poseo conocimientos en programación con Python y en el uso básico de Linux para la gestión de archivos y permisos. Actualmente me preparo para desempeñarme como Analista SOC, guiado por la ética y la disciplina. Mi dominio de idiomas facilita la comunicación en equipos internacionales, mientras que Python y Linux me permiten automatizar y gestionar tareas de seguridad.
     </p>
   </section>
 
@@ -179,3 +178,4 @@
 
 </body>
 </html>
+
