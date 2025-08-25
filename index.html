@@ -37,14 +37,21 @@
     }
 
     h2 {
+      position: relative;
       color: #00f0ff;
       text-shadow: 0 0 3px #00f0ff, 0 0 6px #00f0ff;
       margin: 40px 0 20px 0;
-      border-bottom: 2px solid #00f0ff;
-      padding-bottom: 5px;
+      padding-bottom: 10px;
       width: 100%;
-      max-width: 800px;
-      text-align: left;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      height: 5px; /* grosor de la barra */
+      background: #00f0ff;
+      width: 100%;  /* largo de la barra */
+      margin-top: 5px;
     }
 
     p.intro {
@@ -53,38 +60,6 @@
       max-width: 800px;
       text-align: center;
       line-height: 1.6;
-    }
-
-    /* Tarjetas de perfil */
-    .profile-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 800px;
-      width: 100%;
-      padding: 0;
-      list-style: none;
-    }
-
-    .profile-card {
-      background: #111111;
-      padding: 20px;
-      border-left: 5px solid #00f0ff;
-      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
-      flex: 1 1 250px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      border-radius: 8px;
-    }
-
-    .profile-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
-    }
-
-    .profile-card h3 {
-      margin-top: 0;
-      color: #00f0ff;
     }
 
     /* Tarjetas de proyectos */
@@ -119,6 +94,15 @@
       color: #00f0ff;
     }
 
+    /* Sección Más sobre mí */
+    #mas-sobre-mi p {
+      text-align: center;
+      color: #a0a0a0;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
     /* Sección de certificados */
     .certificates {
       display: flex;
@@ -142,7 +126,7 @@
       h1 {
         font-size: 1.8em;
       }
-      .project-list, .profile-list {
+      .project-list {
         flex-direction: column;
         align-items: center;
       }
@@ -160,16 +144,13 @@
     Aquí encontrarás mis proyectos, aprendizajes, perfil y certificaciones.
   </p>
 
- <!-- MÁS SOBRE MÍ -->
-<section id="mas-sobre-mi">
-  <h2>Más sobre mí</h2>
-  <p style="text-align:center; color:#a0a0a0;">
-    Soy un profesional en transición hacia la ciberseguridad, con formación en educación, dominio de tres idiomas (español, inglés y francés) Poseo conocimientos en programación con Python y en el uso básico de Linux para la gestión de archivos y permisos. Actualmente me preparo para desempeñarme como Analista SOC, guiado por la ética y la disciplina. Mi dominio de idiomas facilita la comunicación en equipos internacionales, mientras que Python y Linux me permiten automatizar y gestionar tareas de seguridad. 
-
-  </p>
-</section>
-
-  </ul>
+  <!-- MÁS SOBRE MÍ -->
+  <section id="mas-sobre-mi">
+    <h2>Más sobre mí</h2>
+    <p>
+      Soy un estudiante en transición hacia la ciberseguridad, con conocimientos en Python, Linux y análisis SOC. 
+    </p>
+  </section>
 
   <!-- PROYECTOS -->
   <h2>Proyectos</h2>
@@ -192,7 +173,7 @@
   <h2>🎓 Certificados</h2> 
   <div class="certificates">
     <div class="certificate">
-      <p>Aquí irán mis certificados cuando los tengas disponibles.</p>
+      <p>Aquí irán mis certificados cuando los tenga disponibles.</p>
     </div>
   </div>
 
