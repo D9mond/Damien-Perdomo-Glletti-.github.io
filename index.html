@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Damián</title>
+  <title>Portafolio de Damián Not</title>
   <style>
-    /* Fuente moderna */
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+    /* Estilos generales */
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -20,47 +20,89 @@
       padding: 20px;
     }
 
+    a {
+      color: #00f0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
     h1 {
       color: #00f0ff;
       text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
       margin-bottom: 10px;
-    }
-
-    p {
-      color: #a0a0a0;
-      font-size: 1.1em;
-      max-width: 600px;
+      font-size: 2.5em;
       text-align: center;
-      margin-bottom: 40px;
     }
 
     h2 {
       color: #00f0ff;
       text-shadow: 0 0 3px #00f0ff, 0 0 6px #00f0ff;
-      margin-bottom: 20px;
+      margin: 40px 0 20px 0;
       border-bottom: 2px solid #00f0ff;
       padding-bottom: 5px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
       width: 100%;
+      max-width: 800px;
+      text-align: left;
     }
 
-    li {
+    p.intro {
+      color: #a0a0a0;
+      font-size: 1.1em;
+      max-width: 800px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* Tarjetas de proyectos */
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 800px;
+      width: 100%;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-card {
       background: #111111;
-      margin: 10px 0;
-      padding: 15px 20px;
+      padding: 20px;
       border-left: 5px solid #00f0ff;
       box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+      flex: 1 1 250px;
       transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 8px;
     }
 
-    li:hover {
-      transform: translateX(10px);
+    .project-card:hover {
+      transform: translateY(-5px);
       box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #00f0ff;
+    }
+
+    /* Sección de certificados */
+    .certificates {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 800px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .certificate {
+      background: #111111;
+      padding: 15px;
+      border-left: 5px solid #00f0ff;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+      border-radius: 8px;
     }
 
     /* Responsive */
@@ -68,24 +110,46 @@
       h1 {
         font-size: 1.8em;
       }
-
-      p, ul {
-        width: 100%;
+      .project-list {
+        flex-direction: column;
+        align-items: center;
       }
     }
+
   </style>
 </head>
 <body>
-  <h1>Bienvenidos al portafolio de Damien</h1>
-  <p>Soy un profesional en transición hacia la ciberseguridad, con formación en educación, dominio de tres idiomas (español, inglés y francés) Poseo conocimientos en programación con Python y en el uso básico de Linux para la gestión de archivos y permisos. Actualmente me preparo para desempeñarme como Analista SOC, guiado por la ética y la disciplina. Mi dominio de idiomas facilita la comunicación en equipos internacionales, mientras que Python y Linux me permiten automatizar y gestionar tareas de seguridad. 
-</p>
+
+  <h1>Bienvenidos a mi Portafolio</h1>
+
+  <p class="intro">
+    Soy un profesional en transición hacia la ciberseguridad, con formación en educación y dominio de tres idiomas: español, inglés y francés. Poseo conocimientos en programación con Python y en el uso básico de Linux para la gestión de archivos y permisos. Actualmente me preparo para desempeñarme como Analista SOC, guiado por la ética y la disciplina.  
+    Mi dominio de idiomas facilita la comunicación en equipos internacionales, mientras que Python y Linux me permiten automatizar y gestionar tareas de seguridad.
+  </p>
 
   <h2>Proyectos</h2>
-  <ul>
-    <li>🔐 Análisis de logs de seguridad</li>
-    <li>🐧 Scripts en Linux</li>
-    <li>🐍 Automatizaciones en Python</li>
-    <li>   Certificados</li>
+  <ul class="project-list">
+    <li class="project-card">
+      <h3>🔐 Análisis de logs de seguridad</h3>
+      <p>Ejercicios prácticos de identificación de incidentes y patrones sospechosos en registros de servidores.</p>
+    </li>
+    <li class="project-card">
+      <h3>🐧 Scripts en Linux</h3>
+      <p>Automatización de tareas y gestión de permisos usando comandos de Linux.</p>
+    </li>
+    <li class="project-card">
+      <h3>🐍 Automatizaciones en Python</h3>
+      <p>Programas para análisis de datos de seguridad y automatización de reportes.</p>
+    </li>
   </ul>
+
+  <h2>Certificados</h2>
+  <div class="certificates">
+    <div class="certificate">Certificado de Curso de Python</div>
+    <div class="certificate">Certificado de Linux Básico</div>
+    <div class="certificate">Certificado de Introducción a Ciberseguridad</div>
+  </div>
+
 </body>
 </html>
+
