@@ -23,6 +23,6 @@ Fluent in three languages (**Spanish**, **English**, and **French**), I speciali
 
 ## Contact
 - **LinkedIn:** https://www.linkedin.com/in/damien-perdomo-glletti-1921ba377/  
-- **GitHub:** 
-- **Email:** perdomogllettidamien@.com
+- **GitHub:** https://github.com/D9mond
+- **Email:** perdomogllettidamien@gmail.com
 
