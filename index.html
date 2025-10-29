@@ -114,43 +114,27 @@
       border-radius: 8px;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
     }
 
     .certificate:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 0 25px #00f0ff;
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00f0ff;
     }
 
     .certificate a {
-      color: inherit;
+      color: #00f0ff;
       text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-weight: 600;
+    }
+
+    .certificate a:hover {
+      text-decoration: underline;
     }
 
     .certificate img {
       max-width: 180px;
       display: block;
       margin: 0 auto 10px;
-      border-radius: 6px;
-      transition: transform 0.3s;
-    }
-
-    .certificate:hover img {
-      transform: scale(1.05);
-    }
-
-    .certificate h3 {
-      color: #00f0ff;
-      margin-bottom: 5px;
-    }
-
-    .certificate p {
-      color: #cfcfcf;
-      font-size: 0.95em;
-      margin: 0;
     }
 
     /* Sección ejercicios */
@@ -256,12 +240,12 @@
   <h2 data-lang="fr" style="color:#b80000;">🎓 Certifications</h2>
 
   <div class="certificates">
-    <div class="certificate" onclick="window.open('https://coursera.org/share/3d380c91f40745791bb27a93c3867340','_blank')">
-      <a href="#">
+    <div class="certificate">
+      <a href="https://coursera.org/share/3d380c91f40745791bb27a93c3867340" target="_blank" rel="noopener">
         <img src="https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" alt="Coursera Logo">
         <h3>Google Cybersecurity Certificate</h3>
-        <p>Issued by Google / Coursera (2025)</p>
       </a>
+      <p>Issued by Google / Coursera (2025)</p>
     </div>
   </div>
 
