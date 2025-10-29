@@ -163,10 +163,41 @@
     .project-card h3{ margin:0 0 8px 0; color:var(--accent); font-size:1rem; font-weight:700; }
     .project-card p{ margin:0; color:var(--muted); font-size:0.98rem; }
 
-    /* Certificates */
-    .certificates{ display:grid; gap:14px; margin-top:12px; }
-    .certificate{ background:var(--card); padding:14px; border-left:4px solid var(--accent); border-radius:8px; box-shadow:0 8px 18px var(--accent-shadow); display:flex; align-items:center; gap:14px; }
-    .certificate img{ max-width:140px; height:auto; display:block; }
+   /* Certificates */
+.certificates { 
+  display: grid; 
+  gap: 14px; 
+  margin-top: 12px; 
+}
+
+/* Tarjeta de certificado con animación */
+.certificate { 
+  background: var(--card); 
+  padding: 14px; 
+  border-left: 4px solid var(--accent); 
+  border-radius: 8px; 
+  box-shadow: 0 8px 18px var(--accent-shadow); 
+  display: flex; 
+  align-items: center; 
+  gap: 14px; 
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), filter var(--transition);
+  cursor: pointer;
+}
+
+/* Efecto al pasar el ratón */
+.certificate:hover { 
+  transform: translateY(-6px); 
+  box-shadow: 0 18px 40px var(--accent-shadow); 
+  border-color: var(--accent); 
+  filter: brightness(1.15);
+}
+
+/* Imagen del certificado */
+.certificate img { 
+  max-width: 140px; 
+  height: auto; 
+  display: block; 
+}
 
     /* Exercises */
     #exercises{ margin-top:8px; }
