@@ -5,21 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Damien Perdomo Galletti</title>
   <style>
-    /* Fuentes */
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-    /* Estilos generales */
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif; /* Fuente más legible */
+      font-family: 'Poppins', sans-serif;
       background-color: #0a0a0a;
-      color: #f0f0f0; /* Un poco más clara que blanco puro */
+      color: #f0f0f0;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      line-height: 1.7; /* mejora la lectura */
+      line-height: 1.7;
     }
 
     a {
@@ -33,9 +31,9 @@
     h1 {
       font-family: 'Orbitron', sans-serif;
       color: #00f0ff;
-      text-shadow: 0 0 8px #00f0ff, 0 0 16px #00f0ff, 0 0 24px #00f0ff;
+      text-shadow: 0 0 8px #00f0ff, 0 0 16px #00f0ff;
       margin-bottom: 10px;
-      font-size: 3em; /* Título más grande */
+      font-size: 3em;
       text-align: center;
     }
 
@@ -49,12 +47,24 @@
       width: 100%;
       max-width: 800px;
       text-align: left;
-      font-size: 1.8em; /* Subtítulos más grandes */
+      font-size: 1.8em;
     }
 
     p, li {
-      font-size: 1.1em; /* texto base un poco más grande */
-      color: #cfcfcf; /* gris claro para lectura */
+      font-size: 1.1em;
+      color: #cfcfcf;
+    }
+
+    /* Texto de presentación */
+    .intro {
+      max-width: 700px;
+      text-align: center;
+      background: #111111;
+      padding: 20px 25px;
+      border-left: 5px solid #00f0ff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,240,255,0.2);
+      line-height: 1.8;
     }
 
     /* Tarjetas de proyectos */
@@ -91,7 +101,6 @@
       font-family: 'Orbitron', sans-serif;
     }
 
-    /* Sección Más sobre mí */
     #mas-sobre-mi p {
       text-align: center;
       color: #cfcfcf;
@@ -101,7 +110,6 @@
       font-size: 1.1em;
     }
 
-    /* Sección de certificados */
     .certificates {
       display: flex;
       flex-direction: column;
@@ -126,83 +134,84 @@
       box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
     }
 
-    /* Responsive */
+    /* === PRACTICAL EXERCISES SECTION (dark style) === */
+    #exercises {
+      padding: 60px 20px;
+      background: #0a0a0a;
+    }
+
+    #exercises .section-title {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #00f0ff;
+      text-shadow: 0 0 8px #00f0ff;
+    }
+
+    #exercises .section-subtitle {
+      text-align: center;
+      color: #cfcfcf;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .exercise-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .exercise-domain h3 {
+      font-size: 1.6rem;
+      color: #00f0ff;
+      margin-bottom: 20px;
+      text-align: left;
+      text-shadow: 0 0 5px #00f0ff;
+    }
+
+    .exercise-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .exercise-card {
+      background: #111111;
+      border-radius: 12px;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 0 8px rgba(0,240,255,0.2);
+      text-decoration: none;
+      color: #f0f0f0;
+      transition: transform 0.2s, box-shadow 0.2s;
+      flex: 1 1 280px;
+      border-left: 4px solid #00f0ff;
+    }
+
+    .exercise-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 16px #00f0ff;
+    }
+
+    .exercise-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .exercise-card span {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
     @media (max-width: 600px) {
       h1 { font-size: 2em; }
       h2 { font-size: 1.5em; }
       p, li { font-size: 1em; }
     }
-
-    /* === PRACTICAL EXERCISES SECTION === */
-#exercises {
-  padding: 60px 20px;
-  background: #f9fafb;
-}
-
-#exercises .section-title {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #111827;
-}
-
-#exercises .section-subtitle {
-  text-align: center;
-  color: #6b7280;
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-}
-
-.exercise-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.exercise-domain h3 {
-  font-size: 1.6rem;
-  color: #1f2937;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.exercise-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.exercise-card {
-  background: white;
-  border-radius: 12px;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  text-decoration: none;
-  color: #111827;
-  transition: transform 0.2s, box-shadow 0.2s;
-  flex: 1 1 280px;
-}
-
-.exercise-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-}
-
-.exercise-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.exercise-card span {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
   </style>
 </head>
 <body>
@@ -210,16 +219,16 @@
   <h1>Bienvenido a mi portafolio</h1>
 
   <p class="intro">
-    Soy Damien Perdomo Galletti estudiante de ciberseguridad con conocimientos en Python, Linux y análisis SOC. 
-    Domino tres idiomas: español, inglés y francés. 
-    Aquí encontrarás mis proyectos, aprendizajes, perfil y certificaciones.
+    I'm Damien Perdomo Galletti, a cybersecurity student with knowledge in Python, Linux, and SOC analysis. 
+    I’m fluent in three languages: Spanish, English, and French. 
+    Here you’ll find my projects, learning experiences, profile, and certifications.
   </p>
 
   <!-- MÁS SOBRE MÍ -->
   <section id="mas-sobre-mi">
     <h2>Más sobre mí</h2>
     <p>
-      Soy un profesional en transición hacia la ciberseguridad, con formación en educación, dominio de tres idiomas (español, inglés y francés) Poseo conocimientos en programación con Python y en el uso básico de Linux para la gestión de archivos y permisos. Actualmente me preparo para desempeñarme como Analista SOC, guiado por la ética y la disciplina. Mi dominio de idiomas facilita la comunicación en equipos internacionales, mientras que Python y Linux me permiten automatizar y gestionar tareas de seguridad.
+      Soy un profesional en transición hacia la ciberseguridad, con formación en educación, dominio de tres idiomas (español, inglés y francés). Poseo conocimientos en programación con Python y en el uso básico de Linux para la gestión de archivos y permisos. Actualmente me preparo para desempeñarme como Analista SOC, guiado por la ética y la disciplina. Mi dominio de idiomas facilita la comunicación en equipos internacionales, mientras que Python y Linux me permiten automatizar y gestionar tareas de seguridad.
     </p>
   </section>
 
@@ -243,75 +252,63 @@
   <!-- CERTIFICADOS -->
   <h2>🎓 Certificados</h2> 
   <div class="certificates">
-  <div class="certificate">
-  <a href="https://coursera.org/share/3d380c91f40745791bb27a93c3867340" target="_blank" rel="noopener" title="Ver certificado en Coursera">
-    <img src="https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" 
-         alt="Coursera Logo" 
-         style="max-width:180px; display:block; margin:0 auto 10px;">
-    <h3 style="text-align:center;">Google Cybersecurity Certificate</h3>
-  </a>
-  <p style="text-align:center; color:#a0a0a0; margin-top:8px;">
-    Emitido por Google / Coursera (2025)
-  </p>
-</div>
-
+    <div class="certificate">
+      <a href="https://coursera.org/share/3d380c91f40745791bb27a93c3867340" target="_blank" rel="noopener" title="Ver certificado en Coursera">
+        <img src="https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" 
+             alt="Coursera Logo" 
+             style="max-width:180px; display:block; margin:0 auto 10px;">
+        <h3 style="text-align:center;">Google Cybersecurity Certificate</h3>
+      </a>
+      <p style="text-align:center; color:#a0a0a0; margin-top:8px;">
+        Emitido por Google / Coursera (2025)
+      </p>
+    </div>
   </div>
-<!-- === Practical Exercises Section === -->
-<section id="exercises" class="section">
-  <h2 class="section-title"> Practical Exercises</h2>
-  <p class="section-subtitle">Hands-on labs and assignments from cybersecurity and system administration courses.</p>
 
-  <div class="exercise-container">
+  <!-- PRACTICAL EXERCISES -->
+  <section id="exercises" class="section">
+    <h2 class="section-title">Practical Exercises</h2>
+    <p class="section-subtitle">Hands-on labs and assignments from cybersecurity and system administration courses.</p>
 
-    <!-- === DOMAIN 1: Threat & Incident Response === -->
-    <div class="exercise-domain">
-      <h3>🛡️ Threat & Incident Response</h3>
-      <div class="exercise-list">
-        <a href="https://drive.google.com/file/d/1PyG2UHgNUBy5ETztD65mpB2whxSy-MGEgk7JVEPYC9c/view" target="_blak" class="exercise-card">
-          <img src="https://img.icons8.com/?size=100&id=12580&format=png" alt="PDF Icon" class="exercise-icon">
-          <span>Incident Handler’s Journal</span>
-        </a>
+    <div class="exercise-container">
+      <div class="exercise-domain">
+        <h3>🛡️ Threat & Incident Response</h3>
+        <div class="exercise-list">
+          <a href="https://drive.google.com/file/d/1PyG2UHgNUBy5ETztD65mpB2whxSy-MGEgk7JVEPYC9c/view" target="_blank" class="exercise-card">
+            <img src="https://img.icons8.com/?size=100&id=12580&format=png" alt="PDF Icon" class="exercise-icon">
+            <span>Incident Handler’s Journal</span>
+          </a>
+          <a href="https://drive.google.com/file/d/12xZ_ZrtVK7XOe5ECGL3y6tJUhpSsFN6Jr-m60vrK74U/view" target="_blank" class="exercise-card">
+            <img src="https://img.icons8.com/?size=100&id=12580&format=png" alt="PDF Icon" class="exercise-icon">
+            <span>Vulnerability Assessment Report</span>
+          </a>
+        </div>
+      </div>
 
-        <a href="https://drive.google.com/file/d/12xZ_ZrtVK7XOe5ECGL3y6tJUhpSsFN6Jr-m60vrK74U
-/view" target="_blak" class="exercise-card">
-          <img src="https://img.icons8.com/?size=100&id=12580&format=png" alt="PDF Icon" class="exercise-icon">
-          <span>Vulnerability Assessment Report</span>
-        </a>
+      <div class="exercise-domain">
+        <h3>🐧 Linux Systems & Automation</h3>
+        <div class="exercise-list">
+          <a href="https://drive.google.com/file/d/1WyvALgnvbdisoRaYVXlov6IjqJxpv29SeueeC_W-3is/view" target="_blank" class="exercise-card">
+            <img src="https://img.icons8.com/?size=100&id=48484&format=png" alt="Linux Icon" class="exercise-icon">
+            <span>File Permissions in Linux</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1-SEtDHEm-JWCWNTuuIoeYRFkUuAiQ2aZis_AJ79skmc/view" target="_blank" class="exercise-card">
+            <img src="https://img.icons8.com/?size=100&id=13441&format=png" alt="Python Icon" class="exercise-icon">
+            <span>Algorithm for File Updates in Python</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="exercise-domain">
+        <h3>🌐 Databases & Network Analysis</h3>
+        <div class="exercise-list">
+          <a href="https://drive.google.com/file/d/19QL9QKG7_1VzIXeil3ZQoBpXgmnSHoE-6_VdbLcJRl0/view" target="_blank" class="exercise-card">
+            <img src="https://img.icons8.com/?size=100&id=10422&format=png" alt="Database Icon" class="exercise-icon">
+            <span>Apply Filters to SQL Queries</span>
+          </a>
+        </div>
       </div>
     </div>
-
-    <!-- === DOMAIN 2: Linux Systems & Automation === -->
-    <div class="exercise-domain">
-      <h3>🐧 Linux Systems & Automation</h3>
-      <div class="exercise-list">
-        <a href="https://drive.google.com/file/d/1WyvALgnvbdisoRaYVXlov6IjqJxpv29SeueeC_W-3is
-/view" target="_blank" class="exercise-card">
-          <img src="https://img.icons8.com/?size=100&id=48484&format=png" alt="Linux Icon" class="exercise-icon">
-          <span>File Permissions in Linux</span>
-        </a>
-
-        <a href="https://drive.google.com/file/d/1-SEtDHEm-JWCWNTuuIoeYRFkUuAiQ2aZis_AJ79skmc
-/view" target="_blank" class="exercise-card">
-          <img src="https://img.icons8.com/?size=100&id=13441&format=png" alt="Python Icon" class="exercise-icon">
-          <span>Algorithm for File Updates in Python</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- === DOMAIN 3: Databases & Network Analysis === -->
-    <div class="exercise-domain">
-      <h3>🌐 Databases & Network Analysis</h3>
-      <div class="exercise-list">
-        <a href="https://drive.google.com/file/d/19QL9QKG7_1VzIXeil3ZQoBpXgmnSHoE-6_VdbLcJRl0
-/view" target="_blank" class="exercise-card">
-          <img src="https://img.icons8.com/?size=100&id=10422&format=png" alt="Database Icon" class="exercise-icon">
-          <span>Apply Filters to SQL Queries</span>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 </body>
 </html>
-
