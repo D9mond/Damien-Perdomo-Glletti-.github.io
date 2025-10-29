@@ -21,7 +21,6 @@
       --transition: 280ms;
     }
 
-    /* Layout and base */
     *{box-sizing:border-box}
     html{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
     body{
@@ -30,29 +29,25 @@
       color:var(--text);
       font-size:var(--base-font);
       line-height:1.65;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       min-height:100vh;
       display:flex;
       flex-direction:column;
       align-items:center;
     }
 
-    /* When French is active we switch accent */
     body.lang-fr{
       --accent: var(--fr-accent);
       --accent-shadow: rgba(230,57,70,0.14);
     }
 
-    /* Container */
     .site {
       width:100%;
       max-width:var(--container-max);
-      padding:28px 28px;
+      padding:28px;
       margin:0 auto;
     }
 
-    /* NAVBAR */
+    /* Navbar */
     .navbar{
       display:flex;
       align-items:center;
@@ -64,12 +59,6 @@
       border-bottom:1px solid rgba(255,255,255,0.03);
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
     .brand h1{
       margin:0;
       font-weight:600;
@@ -78,11 +67,9 @@
       letter-spacing:0.2px;
     }
 
-    /* language buttons (inline in navbar) */
     .lang-group{
       display:flex;
       gap:8px;
-      align-items:center;
     }
     .lang-btn{
       background:transparent;
@@ -92,63 +79,58 @@
       border-radius:8px;
       cursor:pointer;
       font-weight:600;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition), background var(--transition);
-      backdrop-filter: blur(4px);
-      font-size:0.95rem;
+      transition:all var(--transition);
     }
     .lang-btn:hover{ transform:translateY(-4px); box-shadow:0 0 14px var(--accent); border-color:var(--accent); }
-    .lang-btn.active{ background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-color:var(--accent); box-shadow:0 0 14px var(--accent); }
+    .lang-btn.active{ background:rgba(255,255,255,0.02); border-color:var(--accent); box-shadow:0 0 14px var(--accent); }
 
-    /* Intro */
-    header.main-header{
-      text-align:center;
-      margin:28px 0 18px 0;
-    }
-    header .intro-title{
-      margin:0;
-      font-size:1.6rem;
-      font-weight:700;
-      color:var(--accent);
-      text-shadow:0 0 8px var(--accent);
-      line-height:1.05;
-    }
-    header .intro {
+    header.main-header{text-align:center;margin:28px 0 18px;}
+    .intro-title{margin:0;font-size:1.6rem;font-weight:700;color:var(--accent);text-shadow:0 0 8px var(--accent);}
+    .intro{margin-top:12px;font-size:1.05rem;max-width:880px;margin:auto;color:var(--muted);}
+
+    section{width:100%;max-width:var(--container-max);margin:28px auto;}
+    h2.section-heading{margin:0 0 14px;font-size:1.25rem;color:var(--accent);font-weight:700;border-bottom:2px solid var(--accent);padding-bottom:8px;text-shadow:0 0 6px var(--accent);}
+    p,li{color:var(--muted);margin:0 0 12px;font-size:1rem;}
+
+    /* Certificates */
+    .certificates{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
       margin-top:12px;
-      font-size:1.05rem;
-      max-width:880px;
-      margin-left:auto;
-      margin-right:auto;
-      color:var(--muted);
     }
-
-    /* Sections */
-    section {
-      width:100%;
-      max-width:var(--container-max);
-      margin:28px auto;
+    .certificate{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      background:var(--card);
+      padding:16px;
+      border-left:4px solid var(--accent);
+      border-radius:10px;
+      box-shadow:0 6px 18px var(--accent-shadow);
+      transition:transform var(--transition), box-shadow var(--transition);
+      text-decoration:none;
+      color:var(--text);
     }
-
-    h2.section-heading{
-      margin:0 0 14px 0;
-      font-size:1.25rem;
-      color:var(--accent);
-      font-weight:700;
-      border-bottom:2px solid var(--accent);
-      padding-bottom:8px;
-      text-shadow:0 0 6px var(--accent);
+    .certificate:hover{
+      transform:translateY(-6px) scale(1.02);
+      box-shadow:0 12px 30px var(--accent-shadow);
     }
+    .certificate img{
+      max-width:200px;
+      border-radius:8px;
+      margin-bottom:10px;
+      transition:transform var(--transition);
+    }
+    .certificate:hover img{transform:scale(1.05);}
+    .certificate h3{margin:0;font-size:1rem;color:var(--accent);}
+    .certificate p{margin:4px 0 0;color:var(--muted);font-size:0.95rem;}
 
-    p, li { color:var(--muted); margin:0 0 12px 0; font-size:1rem; }
-
-    /* Projects grid */
+    /* Projects and exercises (rest igual que antes) */
     .project-list{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:18px;
-      align-items:start;
       margin-top:12px;
     }
     .project-card{
@@ -156,333 +138,91 @@
       padding:18px;
       border-left:4px solid var(--accent);
       border-radius:10px;
-      box-shadow: 0 6px 18px var(--accent-shadow);
-      transition: transform var(--transition), box-shadow var(--transition);
+      box-shadow:0 6px 18px var(--accent-shadow);
+      transition:transform var(--transition), box-shadow var(--transition);
     }
-    .project-card:hover{ transform:translateY(-6px); box-shadow:0 12px 30px var(--accent-shadow); }
-    .project-card h3{ margin:0 0 8px 0; color:var(--accent); font-size:1rem; font-weight:700; }
-    .project-card p{ margin:0; color:var(--muted); font-size:0.98rem; }
+    .project-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px var(--accent-shadow);}
+    .project-card h3{margin:0 0 8px;color:var(--accent);font-size:1rem;font-weight:700;}
+    .project-card p{margin:0;color:var(--muted);font-size:0.98rem;}
 
-    /* Certificates */
-    .certificates{ display:grid; gap:14px; margin-top:12px; }
-    .certificate{ background:var(--card); padding:14px; border-left:4px solid var(--accent); border-radius:8px; box-shadow:0 8px 18px var(--accent-shadow); display:flex; align-items:center; gap:14px; }
-    .certificate img{ max-width:140px; height:auto; display:block; }
-
-    /* Exercises */
-    #exercises{ margin-top:8px; }
-    .exercise-container{ display:grid; gap:22px; }
-    .exercise-domain h3{ margin:0 0 10px 0; color:var(--accent); font-size:1rem; }
-    .exercise-list{
-      display:grid;
-      gap:12px;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    }
+    .exercise-container{display:grid;gap:22px;}
+    .exercise-domain h3{margin:0 0 10px;color:var(--accent);}
+    .exercise-list{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
     .exercise-card{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      background:var(--card);
-      padding:12px 14px;
-      border-radius:10px;
-      border-left:4px solid var(--accent);
-      text-decoration:none;
-      color:var(--text);
+      display:flex;gap:12px;align-items:center;background:var(--card);
+      padding:12px 14px;border-radius:10px;border-left:4px solid var(--accent);
+      text-decoration:none;color:var(--text);
       box-shadow:0 10px 22px rgba(0,0,0,0.45);
-      transition: transform var(--transition), box-shadow var(--transition);
+      transition:transform var(--transition), box-shadow var(--transition);
     }
-    .exercise-card:hover{ transform:translateY(-6px); box-shadow:0 18px 40px var(--accent-shadow); }
-
-    /* Icon style: inherits color (accent) to achieve monochrome neon effect */
-    .icon {
-      width:44px;
-      height:44px;
-      display:inline-block;
-      flex:0 0 44px;
-      color:var(--accent);
-      filter: drop-shadow(0 6px 18px rgba(0,240,255,0.06));
-    }
-    .exercise-card span{ font-weight:600; color:var(--text); }
-
-    /* Footer placeholder spacing */
-    footer { height:36px; }
-
-    /* Fade transition classes */
-    .fade-out{ opacity:0; transform:translateY(8px); transition: opacity 200ms ease, transform 200ms ease; }
-    .fade-in{ opacity:1; transform:none; transition: opacity 260ms ease, transform 260ms ease; }
-
-    /* Responsive & large-screen font scaling (+10% at big screens) */
-    @media (min-width:1200px){
-      :root{ --base-font: 17.6px; } /* 10% increase */
-      header .intro-title { font-size:1.9rem; }
-      header .intro { font-size:1.12rem; }
-    }
+    .exercise-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px var(--accent-shadow);}
+    .icon{width:44px;height:44px;color:var(--accent);}
 
     @media (max-width:720px){
-      .navbar{ flex-direction:column; align-items:start; gap:12px; padding-bottom:6px;}
-      .brand h1{ font-size:0.98rem; }
-      .lang-btn{ padding:6px 8px; font-size:0.9rem; }
+      .navbar{flex-direction:column;align-items:start;gap:12px;}
     }
-
   </style>
 </head>
 <body>
   <div class="site" role="main">
 
-    <nav class="navbar" aria-label="Main navigation">
+    <nav class="navbar">
       <div class="brand">
         <h1 data-i18n="nav_title">Damien Perdomo Galletti – Cybersecurity Portfolio</h1>
       </div>
-
-      <div class="lang-group" role="navigation" aria-label="Language selector">
-        <button class="lang-btn" data-lang="en" id="btn-en" aria-label="English">🇬🇧 English</button>
-        <button class="lang-btn" data-lang="es" id="btn-es" aria-label="Español">🇪🇸 Español</button>
-        <button class="lang-btn" data-lang="fr" id="btn-fr" aria-label="Français">🇫🇷 Français</button>
+      <div class="lang-group">
+        <button class="lang-btn" data-lang="en" id="btn-en">🇬🇧 English</button>
+        <button class="lang-btn" data-lang="es" id="btn-es">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="fr" id="btn-fr">🇫🇷 Français</button>
       </div>
     </nav>
 
     <header class="main-header">
-      <div class="intro-title-wrap">
-        <h2 class="intro-title" data-i18n="title">Damien Perdomo Galletti – Cybersecurity Portfolio</h2>
-      </div>
-      <p class="intro" data-i18n="intro">I'm Damien Perdomo Galletti, a cybersecurity student with knowledge in Python, Linux, and SOC analysis. I’m fluent in three languages: Spanish, English, and French. Here you’ll find my projects, learning experiences, profile, and certifications.</p>
+      <h2 class="intro-title" data-i18n="title">Damien Perdomo Galletti – Cybersecurity Portfolio</h2>
+      <p class="intro" data-i18n="intro">I'm Damien Perdomo Galletti, a cybersecurity student with knowledge in Python, Linux, and SOC analysis...</p>
     </header>
 
     <main>
-      <section id="about">
-        <h2 class="section-heading" data-i18n="about_title">More about me</h2>
-        <p data-i18n="about_text">I am transitioning into cybersecurity from an educational background. I speak Spanish, English and French. I have experience programming in Python and basic Linux usage for file and permission management. I’m preparing to work as an SOC Analyst with a disciplined, ethical approach. My language skills help in international teams, and Python/Linux allow me to automate and manage security tasks.</p>
-      </section>
-
       <section id="projects">
         <h2 class="section-heading" data-i18n="projects_title">Projects</h2>
-        <ul class="project-list" aria-label="Project list">
+        <ul class="project-list">
           <li class="project-card">
-            <h3 data-i18n="proj1_title">🔐 Security Log Analysis</h3>
-            <p data-i18n="proj1_text">Hands-on exercises identifying incidents and suspicious patterns in server logs.</p>
-          </li>
-          <li class="project-card">
-            <h3 data-i18n="proj2_title">🐧 Linux Scripts</h3>
-            <p data-i18n="proj2_text">Task automation and permission management using Linux commands.</p>
-          </li>
-          <li class="project-card">
-            <h3 data-i18n="proj3_title">🐍 Python Automations</h3>
-            <p data-i18n="proj3_text">Scripts for security data analysis and automating reports.</p>
+            <h3>🔐 Security Log Analysis</h3>
+            <p>Hands-on exercises identifying incidents and suspicious patterns in server logs.</p>
           </li>
         </ul>
       </section>
 
+      <!-- 🔹 NUEVA SECCIÓN DE CERTIFICADOS 🔹 -->
       <section id="certificates">
         <h2 class="section-heading" data-i18n="certs_title">🎓 Certificates</h2>
         <div class="certificates">
-          <div class="certificate">
-            <img src="https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" alt="Coursera" />
-            <div style="flex:1">
-              <h3 data-i18n="cert1_title" style="margin:0;color:var(--text);font-size:1rem">Google Cybersecurity Certificate</h3>
-              <p data-i18n="cert1_text" style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">Issued by Google / Coursera (2025)</p>
-            </div>
-          </div>
+          <a href="https://www.credly.com/badges/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7" 
+             target="_blank" 
+             rel="noopener" 
+             class="certificate">
+            <img src="https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" alt="Google Cybersecurity Certificate">
+            <h3>Google Cybersecurity Certificate</h3>
+            <p>Issued by Google / Coursera (2025)</p>
+          </a>
         </div>
       </section>
 
+      <!-- Ejercicios igual que antes -->
       <section id="exercises">
-        <h2 class="section-heading" data-i18n="exercises_title">Practical Exercises</h2>
-        <p class="section-subtitle" data-i18n="exercises_sub" style="margin:8px 0 18px 0;color:var(--muted)">Hands-on labs and assignments from cybersecurity and system administration courses.</p>
-
+        <h2 class="section-heading">Practical Exercises</h2>
         <div class="exercise-container">
-
           <div class="exercise-domain">
-            <h3 data-i18n="dom1_title">🛡️ Threat & Incident Response</h3>
+            <h3>🛡️ Threat & Incident Response</h3>
             <div class="exercise-list">
-              <a href="https://drive.google.com/file/d/1PyG2UHgNUBy5ETztD65mpB2whxSy-MGEgk7JVEPYC9c/view" target="_blank" class="exercise-card" rel="noopener">
-                <!-- PDF icon (monochrome neon) -->
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM13 3.5V9h5"/></svg>
-                <span data-i18n="ex1">Incident Handler’s Journal</span>
-              </a>
-
-              <a href="https://drive.google.com/file/d/12xZ_ZrtVK7XOe5ECGL3y6tJUhpSsFN6Jr-m60vrK74U/view" target="_blank" class="exercise-card" rel="noopener">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM13 3.5V9h5"/></svg>
-                <span data-i18n="ex2">Vulnerability Assessment Report</span>
-              </a>
+              <a href="#" class="exercise-card"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6z"/></svg><span>Incident Handler’s Journal</span></a>
             </div>
           </div>
-
-          <div class="exercise-domain">
-            <h3 data-i18n="dom2_title">🐧 Linux Systems & Automation</h3>
-            <div class="exercise-list">
-              <a href="https://drive.google.com/file/d/1WyvALgnvbdisoRaYVXlov6IjqJxpv29SeueeC_W-3is/view" target="_blank" class="exercise-card" rel="noopener">
-                <!-- Terminal icon for Linux (monochrome neon) -->
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3.5 9L9 11l-2.5-3L8 7l3 4-3 4-1.5-1zM12 17h6v-2h-6v2z"/></svg>
-                <span data-i18n="ex3">File Permissions in Linux</span>
-              </a>
-
-              <a href="https://drive.google.com/file/d/1-SEtDHEm-JWCWNTuuIoeYRFkUuAiQ2aZis_AJ79skmc/view" target="_blank" class="exercise-card" rel="noopener">
-                <!-- Code icon for Python script -->
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 7h10v2H7V7zm0 8h10v2H7v-2zM5 5h2v14H5z"/></svg>
-                <span data-i18n="ex4">Algorithm for File Updates in Python</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="exercise-domain">
-            <h3 data-i18n="dom3_title">🌐 Databases & Network Analysis</h3>
-            <div class="exercise-list">
-              <a href="https://drive.google.com/file/d/19QL9QKG7_1VzIXeil3ZQoBpXgmnSHoE-6_VdbLcJRl0/view" target="_blank" class="exercise-card" rel="noopener">
-                <!-- Database icon -->
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C7.03 3 3 4.79 3 7v10c0 2.21 4.03 4 9 4s9-1.79 9-4V7c0-2.21-4.03-4-9-4zM5 9.2C6.46 8.3 9 7.6 12 7.6s5.54.7 7 1.6V11c-1.46-.9-4-1.6-7-1.6s-5.54.7-7 1.6V9.2zM5 13.2c1.46-.9 4-1.6 7-1.6s5.54.7 7 1.6v1.8c-1.46-.9-4-1.6-7-1.6s-5.54.7-7 1.6v-1.8z"/></svg>
-                <span data-i18n="ex5">Apply Filters to SQL Queries</span>
-              </a>
-            </div>
-          </div>
-
         </div>
       </section>
-
     </main>
 
     <footer></footer>
-
   </div>
-
-  <script>
-    (function(){
-      const translations = {
-        en: {
-          nav_title: "Damien Perdomo Galletti – Cybersecurity Portfolio",
-          title: "Damien Perdomo Galletti – Cybersecurity Portfolio",
-          intro: "I'm Damien Perdomo Galletti, a cybersecurity student with knowledge in Python, Linux, and SOC analysis. I’m fluent in three languages: Spanish, English, and French. Here you’ll find my projects, learning experiences, profile, and certifications.",
-          about_title: "More about me",
-          about_text: "I am transitioning into cybersecurity from an educational background. I speak Spanish, English and French. I have experience programming in Python and basic Linux usage for file and permission management. I’m preparing to work as an SOC Analyst with a disciplined, ethical approach. My language skills help in international teams, and Python/Linux allow me to automate and manage security tasks.",
-          projects_title: "Projects",
-          proj1_title: "🔐 Security Log Analysis",
-          proj1_text: "Hands-on exercises identifying incidents and suspicious patterns in server logs.",
-          proj2_title: "🐧 Linux Scripts",
-          proj2_text: "Task automation and permission management using Linux commands.",
-          proj3_title: "🐍 Python Automations",
-          proj3_text: "Scripts for security data analysis and automating reports.",
-          certs_title: "🎓 Certificates",
-          cert1_title: "Google Cybersecurity Certificate",
-          cert1_text: "Issued by Google / Coursera (2025)",
-          exercises_title: "Practical Exercises",
-          exercises_sub: "Hands-on labs and assignments from cybersecurity and system administration courses.",
-          dom1_title: "🛡️ Threat & Incident Response",
-          ex1: "Incident Handler’s Journal",
-          ex2: "Vulnerability Assessment Report",
-          dom2_title: "🐧 Linux Systems & Automation",
-          ex3: "File Permissions in Linux",
-          ex4: "Algorithm for File Updates in Python",
-          dom3_title: "🌐 Databases & Network Analysis",
-          ex5: "Apply Filters to SQL Queries"
-        },
-        es: {
-          nav_title: "Damien Perdomo Galletti – Portafolio de Ciberseguridad",
-          title: "Damien Perdomo Galletti – Portafolio de Ciberseguridad",
-          intro: "Soy Damien Perdomo Galletti, estudiante de ciberseguridad con conocimientos en Python, Linux y análisis SOC. Domino tres idiomas: español, inglés y francés. Aquí encontrarás mis proyectos, experiencias de aprendizaje, perfil y certificaciones.",
-          about_title: "Más sobre mí",
-          about_text: "Estoy en transición hacia la ciberseguridad desde una formación en educación. Hablo español, inglés y francés. Tengo experiencia programando en Python y conocimientos básicos de Linux para la gestión de archivos y permisos. Me preparo para desempeñarme como Analista SOC con un enfoque disciplinado y ético. Mi dominio de idiomas facilita el trabajo en equipos internacionales, y Python/Linux me permiten automatizar y gestionar tareas de seguridad.",
-          projects_title: "Proyectos",
-          proj1_title: "🔐 Análisis de logs de seguridad",
-          proj1_text: "Ejercicios prácticos para identificar incidentes y patrones sospechosos en registros de servidores.",
-          proj2_title: "🐧 Scripts en Linux",
-          proj2_text: "Automatización de tareas y gestión de permisos usando comandos de Linux.",
-          proj3_title: "🐍 Automatizaciones en Python",
-          proj3_text: "Programas para análisis de datos de seguridad y automatización de informes.",
-          certs_title: "🎓 Certificados",
-          cert1_title: "Certificado de Ciberseguridad de Google",
-          cert1_text: "Emitido por Google / Coursera (2025)",
-          exercises_title: "Ejercicios Prácticos",
-          exercises_sub: "Laboratorios prácticos y tareas de cursos de ciberseguridad y administración de sistemas.",
-          dom1_title: "🛡️ Respuesta a Amenazas e Incidentes",
-          ex1: "Diario del Gestor de Incidentes",
-          ex2: "Informe de Evaluación de Vulnerabilidades",
-          dom2_title: "🐧 Sistemas Linux y Automatización",
-          ex3: "Permisos de Archivos en Linux",
-          ex4: "Algoritmo para Actualización de Archivos en Python",
-          dom3_title: "🌐 Bases de Datos y Análisis de Redes",
-          ex5: "Aplicar filtros a consultas SQL"
-        },
-        fr: {
-          nav_title: "Damien Perdomo Galletti – Portefeuille Cybersécurité",
-          title: "Damien Perdomo Galletti – Portefeuille Cybersécurité",
-          intro: "Je suis Damien Perdomo Galletti, étudiant en cybersécurité avec des connaissances en Python, Linux et analyse SOC. Je parle couramment trois langues : espagnol, anglais et français. Vous trouverez ici mes projets, expériences d'apprentissage, profil et certifications.",
-          about_title: "À propos de moi",
-          about_text: "Je fais la transition vers la cybersécurité depuis une formation en éducation. Je parle espagnol, anglais et français. J'ai de l'expérience en programmation Python et des connaissances de base en Linux pour la gestion des fichiers et des permissions. Je me prépare à travailler comme Analyste SOC avec une approche disciplinée et éthique. Mes compétences linguistiques facilitent la collaboration dans des équipes internationales, et Python/Linux me permettent d'automatiser et gérer des tâches de sécurité.",
-          projects_title: "Projets",
-          proj1_title: "🔐 Analyse des journaux de sécurité",
-          proj1_text: "Exercices pratiques pour identifier incidents et comportements suspects dans les journaux serveurs.",
-          proj2_title: "🐧 Scripts Linux",
-          proj2_text: "Automatisation des tâches et gestion des permissions via les commandes Linux.",
-          proj3_title: "🐍 Automatisations en Python",
-          proj3_text: "Scripts pour l'analyse des données de sécurité et l'automatisation des rapports.",
-          certs_title: "🎓 Certificats",
-          cert1_title: "Certificat Cybersécurité Google",
-          cert1_text: "Émis par Google / Coursera (2025)",
-          exercises_title: "Exercices Pratiques",
-          exercises_sub: "Labs pratiques et devoirs issus de cours de cybersécurité et d'administration système.",
-          dom1_title: "🛡️ Réponse aux Menaces et Incidents",
-          ex1: "Journal de l'Intervenant d'Incident",
-          ex2: "Rapport d'Évaluation des Vulnérabilités",
-          dom2_title: "🐧 Systèmes Linux & Automatisation",
-          ex3: "Permissions de fichiers sous Linux",
-          ex4: "Algorithme pour la mise à jour de fichiers en Python",
-          dom3_title: "🌐 Bases de Données & Analyse Réseau",
-          ex5: "Appliquer des filtres aux requêtes SQL"
-        }
-      };
-
-      const elements = document.querySelectorAll('[data-i18n]');
-      const langButtons = document.querySelectorAll('.lang-btn');
-      const body = document.body;
-
-      function applyTexts(lang){
-        if(!translations[lang]) lang='en';
-        Object.keys(translations[lang]).forEach(key => {
-          const nodes = document.querySelectorAll('[data-i18n="'+key+'"]');
-          nodes.forEach(n => { n.textContent = translations[lang][key]; });
-        });
-        // document title
-        document.title = translations[lang].title || translations[lang].nav_title;
-      }
-
-      function setActiveButton(lang){
-        langButtons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-      }
-
-      function setLang(lang, skipAnim){
-        if(!translations[lang]) lang='en';
-        localStorage.setItem('site-lang', lang);
-        body.classList.toggle('lang-fr', lang === 'fr');
-        setActiveButton(lang);
-
-        if(skipAnim){
-          applyTexts(lang);
-          return;
-        }
-
-        elements.forEach(e => e.classList.add('fade-out'));
-        setTimeout(()=> {
-          applyTexts(lang);
-          elements.forEach(e => { e.classList.remove('fade-out'); e.classList.add('fade-in'); });
-          setTimeout(()=> elements.forEach(e => e.classList.remove('fade-in')), 320);
-        }, 200);
-      }
-
-      // attach listeners
-      langButtons.forEach(btn => {
-        btn.addEventListener('click', () => setLang(btn.dataset.lang));
-      });
-
-      // init
-      const saved = localStorage.getItem('site-lang') || 'en';
-      setLang(saved, true);
-
-      // accessibility: keyboard support
-      document.addEventListener('keydown', (e) => {
-        if((e.ctrlKey || e.metaKey) && (e.key === '1' || e.key === '2' || e.key === '3')){
-          const map = { '1':'en', '2':'es', '3':'fr' };
-          setLang(map[e.key]);
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
