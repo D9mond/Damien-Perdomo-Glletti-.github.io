@@ -178,24 +178,24 @@
     }
 
     .project-card{
-      background: var(--card);
-      padding: 18px;
-      border-left: 4px solid var(--accent);
-      border-radius: 10px;
-      box-shadow: 0 8px 22px var(--accent-shadow);
+      background:var(--card);
+      padding:18px;
+      border-left:4px solid var(--accent);
+      border-radius:10px;
+      box-shadow:0 8px 22px var(--accent-shadow);
       transition: transform var(--transition), box-shadow var(--transition), filter var(--transition), border-color var(--transition);
       filter: brightness(1.08);
-      position: relative;
-      overflow: hidden;
+      position:relative;
+      overflow:hidden;
     }
 
     .project-card::before{
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 10px;
-      border: 1px solid var(--accent);
-      opacity: 0.1;
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:10px;
+      border:1px solid var(--accent);
+      opacity:0.1;
       transition: opacity var(--transition);
     }
 
@@ -206,21 +206,21 @@
     }
 
     .project-card:hover::before{
-      opacity: 0.35;
+      opacity:0.35;
     }
 
     .project-card h3{
-      margin: 0 0 8px 0;
-      color: var(--accent);
-      font-size: 1rem;
-      font-weight: 700;
-      text-shadow: 0 0 6px var(--accent);
+      margin:0 0 8px 0;
+      color:var(--accent);
+      font-size:1rem;
+      font-weight:700;
+      text-shadow:0 0 6px var(--accent);
     }
 
     .project-card p{
-      margin: 0;
-      color: #c7c7c7;
-      font-size: 0.98rem;
+      margin:0;
+      color:#c7c7c7;
+      font-size:0.98rem;
     }
 
     .certificates{
@@ -230,16 +230,16 @@
     }
 
     .certificate{
-      background: var(--card);
-      padding: 14px;
-      border-left: 4px solid var(--accent);
-      border-radius: 8px;
-      box-shadow: 0 8px 18px var(--accent-shadow);
-      display: flex;
-      align-items: center;
-      gap: 14px;
+      background:var(--card);
+      padding:14px;
+      border-left:4px solid var(--accent);
+      border-radius:8px;
+      box-shadow:0 8px 18px var(--accent-shadow);
+      display:flex;
+      align-items:center;
+      gap:14px;
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), filter var(--transition);
-      cursor: pointer;
+      cursor:pointer;
     }
 
     .certificate:hover{
@@ -250,9 +250,9 @@
     }
 
     .certificate img{
-      max-width: 140px;
-      height: auto;
-      display: block;
+      max-width:140px;
+      height:auto;
+      display:block;
     }
 
     #exercises{ margin-top:8px; }
@@ -400,16 +400,13 @@
              target="_blank"
              rel="noopener"
              style="text-decoration:none;">
-
             <div class="certificate">
               <img src="assets/highlights/ranking.png"
                    alt="TryHackMe Top 1 Percent Ranking" />
 
               <div style="flex:1">
                 <h3 data-i18n="highlight_thm_title" style="margin:0;color:var(--text);font-size:1rem">TryHackMe Global Ranking</h3>
-
                 <p data-i18n="highlight_thm_org" style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">Top 1% · Hands-on Cybersecurity Training Platform</p>
-
                 <p data-i18n="highlight_thm_desc" style="margin-top:8px;color:#c7c7c7;font-size:0.95rem">Achieved Top 1% ranking on TryHackMe through continuous hands-on practice in SOC investigations, log analysis, threat detection, and defensive security labs.</p>
               </div>
             </div>
@@ -426,11 +423,9 @@
              target="_blank"
              rel="noopener"
              style="text-decoration:none;">
-
             <div class="certificate">
               <img src="assets/certs/thm-soc-level1.png"
                    alt="TryHackMe SOC Level 1 Certificate" />
-
               <div style="flex:1">
                 <h3 data-i18n="cert_thm_title" style="margin:0;color:var(--text);font-size:1rem">SOC Level 1 Certificate</h3>
                 <p data-i18n="cert_thm_org" style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">TryHackMe · Defensive Security Training</p>
@@ -443,11 +438,9 @@
              target="_blank"
              rel="noopener"
              style="text-decoration:none;">
-
             <div class="certificate">
               <img src="https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png"
                    alt="Google Cybersecurity Certificate" />
-
               <div style="flex:1">
                 <h3 data-i18n="cert_google_title" style="margin:0;color:var(--text);font-size:1rem">Google Cybersecurity Professional Certificate</h3>
                 <p data-i18n="cert_google_org" style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">Google / Coursera · 2025</p>
@@ -460,11 +453,9 @@
              target="_blank"
              rel="noopener"
              style="text-decoration:none;">
-
             <div class="certificate">
               <img src="assets/certs/indotel-cybersecurity.png"
                    alt="Intermediate Cybersecurity Program Certificate" />
-
               <div style="flex:1">
                 <h3 data-i18n="cert_indotel_title" style="margin:0;color:var(--text);font-size:1rem">Intermediate Cybersecurity Program</h3>
                 <p data-i18n="cert_indotel_org" style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">INDOTEL / Inter-American Development Bank / Cymetria</p>
@@ -473,6 +464,30 @@
             </div>
           </a>
 
+        </div>
+      </section>
+
+      <section id="soc-reports">
+        <h2 class="section-heading" data-i18n="soc_reports_title">SOC Investigation Reports</h2>
+
+        <p data-i18n="soc_reports_sub" style="margin:8px 0 18px 0;color:var(--muted)">
+          Simulated SOC alert investigations demonstrating incident triage, log analysis, IOC identification, and structured documentation.
+        </p>
+
+        <div class="project-list">
+          <a href="assets/reports/Investigation_Notes_SOC-SIM-001_Phishing.pdf"
+             target="_blank"
+             rel="noopener"
+             style="text-decoration:none;">
+
+            <div class="project-card">
+              <h3 data-i18n="soc_report_1_title">Phishing Email Investigation</h3>
+              <p data-i18n="soc_report_1_text">
+                Simulated SOC investigation of a phishing email involving a suspicious sender domain and a shortened malicious URL.
+              </p>
+            </div>
+
+          </a>
         </div>
       </section>
 
@@ -561,6 +576,10 @@
           cert_indotel_title: "Intermediate Cybersecurity Program",
           cert_indotel_org: "INDOTEL / Inter-American Development Bank / Cymetria",
           cert_indotel_desc: "Intermediate cybersecurity training program focused on defensive security concepts, cyber risk awareness, and foundational cyber defense practices.",
+          soc_reports_title: "SOC Investigation Reports",
+          soc_reports_sub: "Simulated SOC alert investigations demonstrating incident triage, log analysis, IOC identification, and structured documentation.",
+          soc_report_1_title: "Phishing Email Investigation",
+          soc_report_1_text: "Simulated SOC investigation of a phishing email involving a suspicious sender domain and a shortened malicious URL.",
           exercises_title: "Hands-On Investigations & Lab Evidence",
           exercises_sub: "Structured lab work and technical evidence demonstrating investigation workflows, defensive analysis, and practical cybersecurity skills.",
           dom1_title: "Threat & Incident Response",
@@ -601,6 +620,10 @@
           cert_indotel_title: "Programa Intermedio de Ciberseguridad",
           cert_indotel_org: "INDOTEL / Banco Interamericano de Desarrollo / Cymetria",
           cert_indotel_desc: "Programa de formación en ciberseguridad de nivel intermedio enfocado en conceptos de defensa, conciencia de riesgo cibernético y prácticas básicas de ciberdefensa.",
+          soc_reports_title: "Reportes de Investigación SOC",
+          soc_reports_sub: "Investigaciones simuladas de alertas SOC que demuestran triage de incidentes, análisis de logs, identificación de IOCs y documentación estructurada.",
+          soc_report_1_title: "Investigación de Correo Phishing",
+          soc_report_1_text: "Investigación simulada de un correo de phishing que involucra un dominio de remitente sospechoso y una URL maliciosa acortada.",
           exercises_title: "Investigaciones Prácticas y Evidencia de Laboratorio",
           exercises_sub: "Trabajo práctico estructurado y evidencia técnica que demuestran flujos de investigación, análisis defensivo y habilidades reales de ciberseguridad.",
           dom1_title: "Respuesta a Amenazas e Incidentes",
@@ -641,6 +664,10 @@
           cert_indotel_title: "Programme Intermédiaire de Cybersécurité",
           cert_indotel_org: "INDOTEL / Banque Interaméricaine de Développement / Cymetria",
           cert_indotel_desc: "Programme de formation intermédiaire en cybersécurité axé sur les concepts de sécurité défensive et les pratiques de cyberdéfense.",
+          soc_reports_title: "Rapports d’Investigation SOC",
+          soc_reports_sub: "Investigations simulées d’alertes SOC démontrant le triage d’incidents, l’analyse de logs, l’identification d’IOCs et une documentation structurée.",
+          soc_report_1_title: "Investigation d’un Email de Phishing",
+          soc_report_1_text: "Investigation SOC simulée d’un email de phishing impliquant un domaine expéditeur suspect et une URL malveillante raccourcie.",
           exercises_title: "Investigations Pratiques et Preuves de Laboratoire",
           exercises_sub: "Travaux pratiques structurés et preuves techniques démontrant des workflows d’investigation, une analyse défensive et des compétences concrètes en cybersécurité.",
           dom1_title: "Réponse aux Menaces et Incidents",
