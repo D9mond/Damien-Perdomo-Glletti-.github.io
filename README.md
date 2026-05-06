@@ -44,7 +44,7 @@ Swiss citizen with EU/EEA work authorization.
 
 ## Contact
 
-- LinkedIn: https://www.linkedin.com/in/damien-perdomo-glletti-1921ba377/
+- LinkedIn: https://www.linkedin.com/in/damienperdomo/
 - TryHackMe: https://tryhackme.com/p/DamienPG
 - GitHub: https://github.com/D9mond
 - Email: perdomogllettidamien@gmail.com
