@@ -113,6 +113,35 @@
       border-color:var(--accent);
       box-shadow:0 0 14px var(--accent);
     }
+    .hero-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px;
+}
+
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 18px;
+  border-radius:10px;
+  text-decoration:none;
+  color:var(--text);
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(0,240,255,0.18);
+  font-weight:600;
+  transition:all var(--transition);
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+.hero-btn:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+  box-shadow:0 0 18px var(--accent-shadow);
+  background:rgba(255,255,255,0.05);
+}
 
     header.main-header{
       text-align:center;
@@ -410,6 +439,37 @@
     </nav>
 
     <header class="main-header">
+      <div class="hero-buttons">
+
+  <a href="https://github.com/D9mond"
+     target="_blank"
+     rel="noopener"
+     class="hero-btn">
+     GitHub
+  </a>
+
+  <a href="www.linkedin.com/in/damienperdomo"
+     target="_blank"
+     rel="noopener"
+     class="hero-btn">
+     LinkedIn
+  </a>
+
+  <a href="https://tryhackme.com/p/DamienPG"
+     target="_blank"
+     rel="noopener"
+     class="hero-btn">
+     TryHackMe
+  </a>
+
+  <a href="assets/resume/Damien_Perdomo_Galletti_Junior_SOC_Analyst_CV.pdf"
+     target="_blank"
+     rel="noopener"
+     class="hero-btn">
+     Resume
+  </a>
+
+</div>
       <div class="intro-title-wrap">
         <h2 class="intro-title" data-i18n="title">Damien Perdomo Galletti</h2>
         <p class="hero-subtitle" data-i18n="hero_subtitle">Junior SOC Analyst | SIEM Monitoring | Alert Investigation | Incident Triage</p>
