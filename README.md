@@ -43,6 +43,14 @@ Swiss citizen with EU/EEA work authorization.
 - Operational troubleshooting documentation
 - Monitoring and log-based investigations
 - Structured technical analysis and resolution workflows
+---
+
+- Windows authentication investigations
+- Event Viewer and system event analysis
+- Connectivity and DNS troubleshooting workflows
+- Operational troubleshooting documentation
+- Monitoring and log-based investigations
+- Structured technical analysis and resolution workflows
 
 ---
 
