@@ -1,10 +1,10 @@
 ![Banner](https://github.com/D9mond/Damien-Perdomo-Glletti-.github.io/blob/main/imagen%20P.png?raw=true)
 
-# Damien Perdomo Galletti – SOC / Blue Team Portfolio
+# Damien Perdomo Galletti – IT Monitoring & Security Operations Portfolio
 
-Welcome to my cybersecurity portfolio.
+Welcome to my technical monitoring and security operations portfolio.
 
-This portfolio contains hands-on SOC investigations, SIEM monitoring exercises, alert triage workflows, log analysis projects, and practical cybersecurity training evidence.
+This portfolio contains hands-on monitoring investigations, troubleshooting workflows, SIEM monitoring exercises, log analysis projects, operational analysis cases, and structured technical documentation focused on IT monitoring and security operations environments.
 
 **Website:** https://d9mond.github.io/Damien-Perdomo-Glletti-.github.io/
 
@@ -12,9 +12,11 @@ This portfolio contains hands-on SOC investigations, SIEM monitoring exercises, 
 
 ## About Me
 
-Entry-level cybersecurity professional focused on Blue Team operations, SOC monitoring, alert triage, log analysis, and structured incident documentation.
+Entry-level IT and monitoring analyst focused on technical troubleshooting, system monitoring, log analysis, and structured operational investigations.
 
-I use this portfolio to document practical lab-based work involving SIEM analysis, Windows and Linux logs, IOC enrichment, phishing investigation, and MITRE ATT&CK mapping.
+I use this portfolio to document practical hands-on work involving SIEM analysis, Windows and Linux logs, monitoring workflows, troubleshooting investigations, authentication analysis, and operational documentation practices.
+
+Additionally experienced in security monitoring concepts including alert triage, incident classification, IOC enrichment, and structured investigation processes.
 
 Languages: Spanish, English, and French.
 
@@ -23,6 +25,15 @@ Swiss citizen with EU/EEA work authorization.
 ---
 
 ## Portfolio Content
+
+## Technical Support & Monitoring Investigations
+
+- Windows authentication investigations
+- Event Viewer and system event analysis
+- Connectivity and DNS troubleshooting workflows
+- Operational troubleshooting documentation
+- Monitoring and log-based investigations
+- Structured technical analysis and resolution workflows
 
 - SOC investigation reports
 - SIEM and log analysis exercises
