@@ -1,4 +1,4 @@
-![Banner](https://github.com/D9mond/Damien-Perdomo-Glletti-.github.io/blob/main/imagen%20P.png?raw=true)
+![Banner](assets/images/portfolio-banner.png)
 
 # Damien Perdomo Galletti – IT Monitoring & Security Operations Portfolio
 
