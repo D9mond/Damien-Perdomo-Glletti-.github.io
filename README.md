@@ -26,6 +26,15 @@ Swiss citizen with EU/EEA work authorization.
 
 ## Portfolio Content
 
+- SOC investigation reports
+- SIEM and log analysis exercises
+- Alert triage workflows
+- IOC enrichment and phishing analysis
+- Windows and Linux investigation practice
+- Cybersecurity certifications and training evidence
+
+---
+
 ## Technical Support & Monitoring Investigations
 
 - Windows authentication investigations
@@ -34,13 +43,6 @@ Swiss citizen with EU/EEA work authorization.
 - Operational troubleshooting documentation
 - Monitoring and log-based investigations
 - Structured technical analysis and resolution workflows
-
-- SOC investigation reports
-- SIEM and log analysis exercises
-- Alert triage workflows
-- IOC enrichment and phishing analysis
-- Windows and Linux investigation practice
-- Cybersecurity certifications and training evidence
 
 ---
 
