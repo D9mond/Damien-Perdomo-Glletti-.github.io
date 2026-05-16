@@ -35,7 +35,7 @@ Swiss citizen with EU/EEA work authorization.
 
 ---
 
-##
+## Technical Support & Monitoring Investigations
 
 - Windows authentication investigations
 - Event Viewer and system event analysis
